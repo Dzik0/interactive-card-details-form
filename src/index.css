@@ -1,4 +1,20 @@
-@import 'tailwindcss';
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  /* SCREENS */
+  --breakpoint-xl: 1440px;
+
+  /* COLORS */
+  --color-my-first-grad: hsl(249, 99%, 64%);
+  --color-my-second-grad: hsl(278, 94%, 30%);
+  --color-my-red: hsl(0, 100%, 66%);
+  --color-my-white: hsl(0, 100%, 100%);
+  --color-my-gray-200: hsl(270, 3%, 87%);
+  --color-my-gray-400: hsl(212, 12%, 71%);
+  --color-my-purple-950: hsl(278, 68%, 11%);
+}
 
 * {
   box-sizing: border-box;
@@ -6,6 +22,7 @@
 
 body {
   min-height: 100vh;
+  font-family: "Space Grotesk", monospace;
 }
 
 img {
@@ -14,4 +31,16 @@ img {
 
 button {
   font-family: inherit;
+}
+
+.section-one {
+  background-image: url("/bg-main-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 1400px) {
+  .section-one {
+    background-image: url("/bg-main-desktop.png");
+  }
 }
