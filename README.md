@@ -1,73 +1,115 @@
-# React + TypeScript + Vite
+# 💳 Interactive Card Details Form
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## A dynamic React application for collecting, displaying, and validating credit card input data in real time. Built with **React**, **TypeScript**, and **Tailwind CSS**, featuring live card preview, animated transitions, and robust form validation.
 
-Currently, two official plugins are available:
+## 📸 Preview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Interactive Card Form Screenshot](/screenshot.jpg)
+Live: https://dzik0.github.io/interactive-card-details-form
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- **Live Card Preview**  
+  Instantly see your entered data reflected on animated credit card graphics.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Form Validation**  
+  Cardholder, number, expiry, and CVC fields validated for format and length.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Error Handling**  
+  Clear, user-friendly error highlights and messages for invalid input.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Submission & Confirmation**  
+  “Confirm” validates input and shows a thank-you message on success.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **Responsive Layout**  
+  Fully responsive—works on all screen sizes.
+
+- **Smooth Animations**  
+  Enhanced with `motion/react` for engaging card and UI transitions.
+
+---
+
+## 🛠️ Tech Stack
+
+- React (with Context API & hooks)
+- TypeScript
+- Tailwind CSS
+- motion/react (animations)
+- Vite
+
+---
+
+## 📁 File Structure
+
+```
+src/
+├── comps/
+│   ├── FrontCard.tsx
+│   ├── BackCard.tsx
+│   ├── CardsContainer.tsx
+│   ├── FormComponent.tsx
+│   └── CompleteMessage.tsx
+├── App.tsx
+├── index.css
+public/
+├── bg-card-front.png
+├── card-logo.svg
+├── screenshot.jpg
+└── ...
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🧠 How It Works
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Type card details into the form and watch them reflect live on the card images.
+- Input validation for every field and instant feedback on errors.
+- Submitting a valid form displays a friendly completion message.
+
+---
+
+## 📦 Getting Started
+
+1. **Clone this repo:**
+
+   ```bash
+   git clone https://github.com/Dzik0/interactive-card-details-form.git
+   cd interactive-card-details-form
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Run locally:**
+   ```bash
+   npm run dev
+   ```
+
+---
+
+## ✅ To Do / Improvements
+
+- [ ] Persist entered data with localStorage
+- [ ] Improve accessibility (better ARIA and keyboard support)
+- [ ] Detect/validate card brands
+- [ ] Add tests for form logic
+
+---
+
+## 👨‍💻 Author
+
+**Dzik0**  
+GitHub: [https://github.com/Dzik0](https://github.com/Dzik0)
+
+---
+
+## 📝 License
+
+Open-source under the [MIT License](LICENSE).
+
+---
