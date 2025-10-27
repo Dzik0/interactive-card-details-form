@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import cardBack from "/bg-card-back.png";
 import { cardContext } from "../App";
+import { motion } from "motion/react";
 
 export default function BackCard() {
   const cardInfo = useContext(cardContext);
@@ -11,7 +12,10 @@ export default function BackCard() {
 
   const { cardCvc } = cardInfo.details;
   return (
-    <div className="absolute top-10 right-5 z-1 w-70 xl:top-4/8 xl:-right-60 xl:w-110">
+    <motion.div
+      className="absolute top-10 right-5 z-1 w-70 xl:top-4/8 xl:-right-60 xl:w-110"
+      whileHover={{ scale: 1.1 }}
+    >
       <img
         src={cardBack}
         alt="Back card"
@@ -20,6 +24,6 @@ export default function BackCard() {
       <p className="absolute top-[66px] right-9 text-sm font-thin text-white xl:top-26 xl:right-14 xl:text-xl">
         {cardCvc === "" ? "000" : cardCvc}
       </p>
-    </div>
+    </motion.div>
   );
 }

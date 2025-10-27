@@ -3,6 +3,8 @@ import cardFront from "/bg-card-front.png";
 import logo from "/card-logo.svg";
 import { cardContext } from "../App";
 
+import { motion } from "motion/react";
+
 export default function FrontCard() {
   const cardInfo = useContext(cardContext);
 
@@ -25,7 +27,19 @@ export default function FrontCard() {
     cardMonth.split("").length === 1 ? "0" + cardMonth : cardMonth;
 
   return (
-    <div className="absolute top-34 left-5 z-2 w-70 xl:top-3/10 xl:left-30 xl:w-110">
+    <motion.div
+      className="absolute top-34 left-5 z-2 w-70 xl:top-3/10 xl:left-30 xl:w-110"
+      whileHover={{ scale: 1.1 }}
+      initial={{ rotate: 0 }}
+      animate={{
+        rotate: 360,
+        transition: {
+          delay: 0.2,
+          duration: 0.9,
+          type: "spring",
+        },
+      }}
+    >
       <img
         src={cardFront}
         alt="Back card"
@@ -46,6 +60,6 @@ export default function FrontCard() {
         alt="card logo"
         className="absolute top-5 left-5 w-12 xl:top-7 xl:left-10 xl:w-20"
       />
-    </div>
+    </motion.div>
   );
 }

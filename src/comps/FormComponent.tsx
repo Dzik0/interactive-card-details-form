@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { cardContext } from "../App";
 import clsx from "clsx";
+import { motion } from "motion/react";
 
 export default function FormComponent() {
   const cardInfo = useContext(cardContext);
@@ -194,16 +195,16 @@ export default function FormComponent() {
           <p className="text-my-red mt-2 text-center text-xs">Check format</p>
         )}
       </div>
-      <button
+      <motion.button
         className="bg-my-purple-950 cursor-pointer rounded-md p-4 font-normal text-white"
         onClick={handleSubmit}
+        whileHover={{ scale: 1.02 }}
+        whileTap={{ scale: 0.8 }}
       >
         Confirm
-      </button>
+      </motion.button>
       {fillError && (
-        <p className="text-my-red text-center text-sm uppercase">
-          check all the gaps
-        </p>
+        <p className="text-my-red text-center text-sm">Fill all the gaps</p>
       )}
     </div>
   );
