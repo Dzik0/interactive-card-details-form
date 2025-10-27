@@ -57,3 +57,7 @@ export default function App() {
 }
 
 export { cardContext };
+
+//TO DO
+//FIX THE INPUT NUMBERS WITH CARD
+//FINISH CSS
