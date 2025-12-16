@@ -5,7 +5,7 @@
 ## 📸 Preview
 
 ![Interactive Card Form Screenshot](/screenshot.jpg)
-Live: https://dzik0.github.io/interactive-card-details-form
+Live: https://p-glazowski.github.io/interactive-card-details-form
 
 ---
 
@@ -75,7 +75,7 @@ public/
 1. **Clone this repo:**
 
    ```bash
-   git clone https://github.com/Dzik0/interactive-card-details-form.git
+   git clone https://github.com/p-glazowski/interactive-card-details-form.git
    cd interactive-card-details-form
    ```
 
@@ -103,8 +103,7 @@ public/
 
 ## 👨‍💻 Author
 
-**Dzik0**  
-GitHub: [https://github.com/Dzik0](https://github.com/Dzik0)
+**Piotr Głazowski** 
 
 ---
 
